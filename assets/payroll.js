@@ -16,13 +16,17 @@ const collectEmployees = function() {
     }
 
     employeesArray.push(newEmployee);
-    console.log(employeesArray);
+    if (((newEmployee.firstName === null) || (newEmployee.lastName === null) || (newEmployee.salary === null)) || (newEmployee.firstName == "") || (newEmployee.lastName == "") || (newEmployee.salary == "")){
+      alert("🙃 Please fill in all the blanks you silly goose 🙃")
+      return;
+    } else {
+    // console.log(employeesArray);
     if (confirm("Add another?") == true) {
       addEmployee = true;
     } else {
       addEmployee = false;
       return employeesArray;
-    }}};
+    }}}};
   
   // TODO: Get user input to create and return an array of employee objects
 
@@ -39,7 +43,7 @@ const displayAverageSalary = function(employeesArray) {
       totalSalary += parseInt(employeesArray[i].salary);
     }
     avgSalary = (parseInt(totalSalary) / parseInt(employeesArray.length));
-    console.log(`Average salary for all employees listed: ${avgSalary}`)
+    console.log(`Average salary for all employees listed: $${avgSalary}.00`)
     return avgSalary;
 }}
 
@@ -52,7 +56,7 @@ const getRandomEmployee = function(employeesArray) {
     //console.log(employeesArray)
   let i = Math.floor(Math.random() * employeesArray.length);
   const currentEmployee = employeesArray[i];
-  console.log(`Wowzers, gee wilickers Batman! ❤️${currentEmployee.firstName}❤️ is the lucky employee of the day!`)
+  console.log(`Wowzers, Holy Cow! ❤️${currentEmployee.firstName}❤️ is the lucky employee of the day!`)
   return currentEmployee.firstName;
 
 }}

@@ -12,7 +12,7 @@
 
 ## Descrption
 
-This is a very simple javascript program to quickly create a table which includes employee's names and salaries. If you open the console there are also a few messages in there. There is a random employee picker and an average salary calculator which both log in the console.
+This is a very simple javascript program to quickly create a table which includes employee's names and salaries. If you open the console there are also a few messages: there is a random employee picker and an average salary calculator which both log in the console.
 
 ## Table of Contents
 
