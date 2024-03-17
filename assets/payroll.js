@@ -37,9 +37,9 @@ const displayAverageSalary = function(employeesArray) {
     } else {
     for (let i=0; i < employeesArray.length; i++) {
       totalSalary += parseInt(employeesArray[i].salary);
-      return totalSalary;
     }
     avgSalary = (parseInt(totalSalary) / parseInt(employeesArray.length));
+    console.log(`Average salary for all employees listed: ${avgSalary}`)
     return avgSalary;
 }}
 
@@ -49,10 +49,10 @@ const getRandomEmployee = function(employeesArray) {
   if (employeesArray === undefined){
     return;
   } else {
-    
-    console.log(employeesArray)
+    //console.log(employeesArray)
   let i = Math.floor(Math.random() * employeesArray.length);
   const currentEmployee = employeesArray[i];
+  console.log(`Wowzers, gee wilickers Batman! ❤️${currentEmployee.firstName}❤️ is the lucky employee of the day!`)
   return currentEmployee.firstName;
 
 }}
